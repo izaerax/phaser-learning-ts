@@ -19,7 +19,7 @@ export class Player extends Actor {
      We have to do it because of the body miscalculation error of Phaser. */
     this.getBody().setSize(30, 30)
     this.getBody().setOffset(8, 0)
-
+    
     this.initAnimations()
   }
 
