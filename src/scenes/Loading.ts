@@ -15,6 +15,10 @@ export default class LoadingScene extends Phaser.Scene {
       url: 'tilemaps/tiles/dungeon-16-16.png',
     })
     this.load.tilemapTiledJSON('dungeon', 'tilemaps/json/dungeon.json')
+    this.load.spritesheet('tiles_spr', 'tilemaps/tiles/dungeon-16-16.png', {
+      frameWidth: 16,
+      frameHeight: 16,
+    })
   }
 
   create(): void {
