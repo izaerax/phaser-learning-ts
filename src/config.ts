@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import Phaser, {Types} from 'phaser';
 
 window.sizeChanged = () => {
   if (window.game.isBooted) {
@@ -12,6 +12,10 @@ window.sizeChanged = () => {
   }
 };
 window.onresize = () => window.sizeChanged();
+
+type GameConfigExtended = Types.Core.GameConfig & {
+  winScore: number;
+};
 
 export default {
   type: Phaser.AUTO,
@@ -42,4 +46,5 @@ export default {
   audio: {
     disableWebAudio: false,
   },
-};
+  winScore: 40
+} as GameConfigExtended;
