@@ -23,6 +23,7 @@ export default class LoadingScene extends Phaser.Scene {
 
   create(): void {
     this.scene.start('level-1-scene')
+    this.scene.start('ui-scene')
   }
 
 }
